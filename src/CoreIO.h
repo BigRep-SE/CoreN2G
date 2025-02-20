@@ -583,7 +583,11 @@ enum class TccOutput : uint8_t
 
 	// TCC devices on peripheral G
 	tcc0_0G = 0x80, tcc0_1G, tcc0_2G, tcc0_3G, tcc0_4G, tcc0_5G, tcc0_6G, tcc0_7G,
+#ifdef __SAME51J20A__
+	tcc1_0G = 0x88, tcc1_1G, tcc1_2G, tcc1_3G, tcc1_4G, tcc1_5G, tcc1_6G, tcc1_7G,
+#else
 	tcc1_0G = 0x88, tcc1_1G, tcc1_2G, tcc1_3G, tcc1_4G, tcc1_5G,
+#endif
 	tcc2_0G = 0x90, tcc2_1G, tcc2_2G,
 	tcc3_0G = 0x98, tcc3_1G,
 	tcc4_0G = 0xA0, tcc4_1G,

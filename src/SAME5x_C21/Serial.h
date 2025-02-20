@@ -14,7 +14,7 @@
 
 namespace Serial
 {
-#if SAME5x
+#if SAME5x && !defined(LOW_SPEED_SERIAL)
 	constexpr uint32_t SercomFastGclkNum = GclkNum60MHz;
 	constexpr uint32_t SercomFastGclkFreq = 60000000;
 	constexpr uint32_t SercomSlowGclkNum = GclkNum31KHz;
